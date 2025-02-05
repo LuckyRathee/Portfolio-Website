@@ -3,37 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Man</title>
+    <title>Your Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            overflow: hidden;
+        * {
             margin: 0;
-            height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
 
-        .moving-text {
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 900px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .image {
+            flex: 1;
+            background: url('my-image.jpg') center/cover no-repeat;
+        }
+
+        .details {
+            flex: 2;
+            padding: 30px;
+        }
+
+        h1 {
             font-size: 2rem;
-            font-weight: bold;
             color: #333;
-            position: absolute;
-            animation: moveAround 10s linear infinite;
         }
 
-        @keyframes moveAround {
-            0% { top: 0; left: 0; }
-            25% { top: 0; left: 100%; transform: translateX(-100%); }
-            50% { top: 100%; left: 100%; transform: translate(-100%, -100%); }
-            75% { top: 100%; left: 0; transform: translateY(-100%); }
-            100% { top: 0; left: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .skills {
+            margin: 15px 0;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 5px 5px 0 0;
+            font-size: 14px;
+        }
+
+        .contact {
+            margin-top: 20px;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="moving-text">Hello Man</div>
+    <div class="container">
+        <div class="image"></div>
+        <div class="details">
+            <h1>Your Name</h1>
+            <p><strong>About Me:</strong> A passionate developer who loves coding and creating smart applications.</p>
+            <div class="skills">
+                <p><strong>Skills:</strong></p>
+                <span>Java</span>
+                <span>Python</span>
+                <span>C++</span>
+                <span>Web Development</span>
+                <span>AI & ML</span>
+            </div>
+            <div class="contact">
+                <p><strong>Contact Me:</strong></p>
+                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
